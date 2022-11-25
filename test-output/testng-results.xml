@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-25T18:33:26 EET" name="Default suite" finished-at="2022-11-25T18:33:34 EET" duration-ms="7129">
+    <groups>
+    </groups>
+    <test started-at="2022-11-25T18:33:26 EET" name="Default test" finished-at="2022-11-25T18:33:34 EET" duration-ms="7129">
+      <class name="Check_High_Price">
+        <test-method is-config="true" signature="Log_in()[pri:0, instance:Check_High_Price@35d019a3]" started-at="2022-11-25T18:33:26 EET" name="Log_in" finished-at="2022-11-25T18:33:31 EET" duration-ms="4784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Log_in -->
+        <test-method signature="High_Price()[pri:0, instance:Check_High_Price@35d019a3]" started-at="2022-11-25T18:33:31 EET" name="High_Price" finished-at="2022-11-25T18:33:34 EET" duration-ms="2290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- High_Price -->
+      </class> <!-- Check_High_Price -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
