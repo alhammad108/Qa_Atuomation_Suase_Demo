@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-//price.split("$");عشان تشيل الاشي الي بطلبو بس لما يكون في list 
 import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -47,7 +46,7 @@ public class check_Low_Price {
 			
 			String price = Price_List.get(i).getText();
 
-			price.trim();// ذا كان في سبيس بالكود بشيلها
+			price.trim();
 
 			String Updat_Price = price.replace("$", "");
 
