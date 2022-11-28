@@ -13,7 +13,7 @@ import com.github.dockerjava.core.dockerfile.DockerfileStatement.Add;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class check_High_Price {
+public class check_High_price {
 
 	public WebDriver driver;
 
@@ -44,11 +44,11 @@ List<Double> Addtion=new ArrayList<>();
 for(int i=0;i<High_Price_List.size();i++) {
 	String hieh_Price=high_Price_list.get(i).getText();
 	
-	String update_High_Price =hieh_Price.replace("$", "");
+	String update_High_price =hieh_Price.replace("$", "");
 	
 	hieh_Price.trim();
 	
-	  double val = Double.parseDouble(update_High_Price);
+	  double val = Double.parseDouble(update_High_price);
 	  Addtion.add(val);
 	  
 	  
