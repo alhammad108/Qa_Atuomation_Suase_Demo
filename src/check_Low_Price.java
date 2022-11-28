@@ -22,12 +22,12 @@ public class check_Low_Price {
 		WebDriverManager.chromedriver().setup();
 
 		driver = new ChromeDriver();
-		String User_Name = "standard_user";
+		String user_Name = "standard_user";
 		String Password = "secret_sauce";
 
 		driver.get("https://www.saucedemo.com/");
 
-		driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys(User_Name);
+		driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys(user_Name);
 		Thread.sleep(2000);
 
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys(Password);
@@ -35,32 +35,32 @@ public class check_Low_Price {
 	}
 
 	@Test(groups = "sorting")
-	public void Check_Low_To_High() throws InterruptedException {
+	public void check_Low_To_High() throws InterruptedException {
 		driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div[2]/span/select")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/div[2]/span/select/option[3]")).click();
 
-		List<WebElement> Price_List = driver.findElements(By.className("inventory_item_price"));
-		List<Double> myNewPriceList = new ArrayList<>();
+		List<WebElement> price_List = driver.findElements(By.className("inventory_item_price"));
+		List<Double> myNewpriceList = new ArrayList<>();
 		for (int i = 0; i < Price_List.size(); i++) {
 			
 			String price = Price_List.get(i).getText();
 
 			price.trim();
 
-			String Updat_Price = price.replace("$", "");
+			String updat_Price = price.replace("$", "");
 
-			double val = Double.parseDouble(Updat_Price);
+			double val = Double.parseDouble(updat_Price);
 
-			myNewPriceList.add(val);
+			myNewpriceList.add(val);
 
 		}
 		
-		for(int k=0;k<myNewPriceList.size();k++) {
+		for(int k=0;k<myNewpriceList.size();k++) {
 			
-			boolean CheckProcess=myNewPriceList.get(0) < myNewPriceList.get(myNewPriceList.size()-1);
+			boolean checkProcess=myNewpriceList.get(0) < myNewpriceList.get(myNewpriceList.size()-1);
 			
-			Assert.assertEquals(CheckProcess, true);
+			Assert.assertEquals(checkProcess, true);
 		}
 		
 }
